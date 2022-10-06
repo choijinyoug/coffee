@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+main{
+  padding-top:120px;
+}
+
+.badges{
+    width:130px;
+    position:fixed;
+    right:5px;top:125px;
+}
+.badges img{
+    border-radius:10px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 비주얼영역서식 */
+.visual{
+  background:url('../images/visual_bg.jpg');
+}
+.visual > h2{
+  display:none;
+}
+.visual .inner{
+  width:1100px;height:646px;
+  margin: 0px auto;
+  position:relative; /* 자식요소의 기준 */
+}
+
+.title, .cup1, .cup1_txt, .cup2, .cup2_txt, .spoon{
+  position:absolute;
+}
+.title{top:40px;left:-10px;}
+.cup1{bottom:0px;right:-47px;}
+.cup1_txt{top:40px;right:60px;}
+.cup2{bottom:0px;right:162px;}
+.cup2_txt{top:186px;right:412px;}
+.spoon{bottom:0px;left:275px;}
+
+.detail_btn{
+  width:130px;
+  padding:10px;
+  border:4px;
+  border:2px solid #592b18;
+  font-size:16px;
+  font-weight:700;
+  text-align:center;
+  display:block;
+  transition:0.4s;
+  color:#592b18;
+  transform:translateX(130px);
+  border-radius:3px;
+}
+.detail_btn:hover{
+  color: #fff;
+  background: #592b18;
+}
+.fadein{
+  opacity:0;
+}
+
+/* 공지사항 */
+.notice{
+  height:62px;         
+  background: rgb(51,51,51);
+  background: linear-gradient(90deg, rgba(51,51,51,1)61.6%, rgb(229, 223, 186)61.6%);
+}
+.n_inner{
+  width:1100px;
+  margin:0px auto;
+  display: flex;
+}
+.n_inner__left{
+  width: 70%;
+  display:flex;
+  overflow: hidden;
+  background-color: #333;
+  align-items: center;
+}
+.n_inner__left h2{
+  color: #fff;
+  font-size: 17px;
+  font-weight:700;
+  margin-right: 20px;
+  width: 100px;
+}
+.n_inner__right{
+  width: 30%;
+  justify-content: center;
+  display: flex;
+}
+.n_inner__right h2{
+  width:120px;
+  color: #333;
+  font-size: 17px;
+  line-height: 62px;
+}
+.notice .n_inner__left .swiper .swiper-slide{
+  height: 62px;
+  /* display: flex; */
+  text-align: left;
+}
+.notice .n_inner__left .swiper .swiper-slide a{
+  color: #fff;
+  font-size: 15px;
+
+}
+.n_inner__left i{
+  color: #fff;
+  font-size:30px;
+  padding: 3px 20px 0px 0px;
+}
+.n_inner__right i{
+  font-size:30px;
+  padding: 15px 20px 0px 0px;
+}
+.proSlide .swiper-pagination{
+  position:absolute;
+  bottom:40px;
+}
+.promotion{
+  display:flex;
+  justify-content: center;
+  overflow: hidden;
+  background: #f6f5ef;
+  transition:0.4s;
+  height:663px;
+}
+/* 버튼 클릭시 프로모션박스에 적용할 서식 */
+.hide{
+  height:0px !important;
+}
+.promotion > h2{display:none;}
+.promotion .swiper{
+  position:relative;
+  width: calc(819px * 3 + 10px * 2);
+  height:653px;
+  flex-shrink: 0;
+}
+.proSlide .swiper-slide{
+  position: relative;
+  opacity: .5;
+  transition: opacity 1s;
+}
+.promotion .swiper-slide-active{
+  opacity: 1;
+}
+.promotion .swiper-slide .btn {
+  position:absolute;
+  bottom:40px;
+  left:0;
+  right:0;
+  margin: auto;
+}
+.proSlide .swiper-button-prev, .proSlide .swiper-button-next{
+  
+}
+.proSlide .swiper-button-prev{
+  position:absolute;left:0px;
+  width: 42px; height:42px;
+  border-radius:50%;
+  border:2px solid #333;
+  top:270px; left:50%;
+  margin-left: -480px;
+  text-align:center;
+  box-sizing: border-box;
+}
+.proSlide .swiper-button-next{
+  position:absolute;right:0px;
+  width:42px;height:42px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+/* 리워드 서식 */
+.reward{
+  height:241px;
+  background: rgb(39,39,39);
+  background: linear-gradient(90deg, rgba(39,39,39,1) 52%, rgba(213,199,152,1) 52%);
+}
+.reward_inner{
+  background-image: url('../images/rewards.jpg');
+  width:1100px;
+  height:241px;
+  margin: 0px auto;
+  position:relative;
+}
+.btn{
+  width:130px; padding:10px;
+  font-size:16px; font-weight:700;
+  text-align:center; display:block;
+  transition:0.4s;
+  border-radius:3px;
+  border: 2px solid #333;
+}
+.btn:hover{
+  color: #fff;
+  background: #333;
+}
+.gift{width: 250px;}
+.btn_join, .btn_login{
+  display:inline-block !important;
+  margin-bottom: 10px;
+  width:111px;
+}
+.btn_group{
+  position:absolute;
+  right:0px;
+  bottom:30px;
+  width:275px;
+  left: 800px;
+}
+
+/* 영상콘텐츠 */
+.movie h2{
+  display:none;
+}
+.movie{
+  width:100%;
+  height:700px;
+  background: #222;
+  position:relative;
+}
+.movie .m_inner{
+  width:1100px; height:700px;
+  margin:0px auto;
+  position:relative;
+  box-sizing: border-box;
+  z-index:12;
+}
+.movie .m_inner img{
+  position: absolute;
+}
+.m_img1{
+  left:-60px;
+  top:30px;
+  animation-name:m_img1;
+  animation-iteration-count:infinite; 
+  animation-duration:3s;
+}
+.m_img2{
+  left:40px;
+  top:400px;
+  animation-name:m_img2;
+  animation-iteration-count:infinite; 
+  animation-duration:4s;
+}
+.m_img3{
+  right:0px;
+  bottom:-60px;
+  animation-name:m_img3;
+  animation-iteration-count:infinite; 
+  animation-duration:5s;
+}
+
+@keyframes m_img1{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0px);}
+}
+
+@keyframes m_img2{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0px);}
+}
+
+@keyframes m_img3{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0px);}
+}
+
+.youtube{
+  width:100%;
+  height:700px;
+  position:absolute;
+  top:0px;left:0px;
+  z-index:10;
+}
+.youtube video{
+  width:100%;
+  height:100%;
+}
+.cover{
+  position:absolute;
+  top:0px;left:0px;
+  width:100%;height:100%;
+  z-index:11;
+  background-image:url('../images/video_cover_pattern.png')
+}
+
+/* 아이스커피 블랜드 */
+.season-product{
+  background:url('../images/season_product_bg.jpg');
+  height:400px;
+}
+.season-product h2{
+  display:none;
+}
+
+.season-product .inner{
+  width:1100px;
+  height:400px;
+  margin:0px auto;
+  position:relative;
+}
+.season-product .coffee01{
+  position:absolute;
+}
+.season-product .txt_group{
+  position:absolute;
+  top: 110px;
+  right: 100px;
+  width:480px;
+}
+.season-product .c_title{
+  margin-bottom:10px;
+}
+.season-product .description{
+  margin-bottom:15px;
+}
+.txt_group .btn{
+  position:absolute;
+  transform:none;
+  bottom: -30px;
+}
+
+/* 리저브 커피 */
+.reserve-coffee{
+  background-image: url("../images/reserve_bg.jpg");
+}
+.reserve-coffee h2{
+  display:none;
+}
+.reserve-coffee .inner{
+  height: 400px;
+  width:1100px;
+  margin: 0px auto;
+  position: relative;
+}
+.reserve-coffee .reserve-logo{
+  position:absolute;
+  top:110px;
+  left:0;
+}
+.reserve-coffee .text-group{
+  position: absolute;
+  top:124px;
+  left:208px;
+}
+.reserve-coffee .product{
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite{
+  background-image: url("../images/favorite_bg.jpg");
+}
+.pick-your-favorite h2{
+  display:none;
+}
+.pick-your-favorite .inner{
+  padding: 110px 0;
+  position:relative;
+}
+.pick-your-favorite .text-group{
+  width:362px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.pick-your-favorite .text-group .ctitle{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description{
+  margin-bottom: 40px;
+}
+
+/* 리저브 스토어 */
+.reserve-store{
+  background-image: url("../images/reserve_store_bg.jpg")
+}
+.reserve-store h2{
+  display:none;
+}
+.reserve-store .inner{
+  height:600px;
+}
+
+/* FIND STORE */
+.find-store{
+  background-image: url("../images/find_store_bg.jpg");
+}
+.find-store h2{
+  display: none;
+}
+.find-store .inner{
+  height: 400px;
+  position:relative;
+}
+.find-store .texture1{
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+.find-store .texture2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture1{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+.find-store .picture2{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+.find-store .text-group{
+  position: absolute;
+  top:120px;
+  left:550px;
+}
+.find-store .text-group .f_title{
+  margin-bottom: 20px;
+}
+.find-store .text-group .description{
+  margin-bottom: 20px;
+}
